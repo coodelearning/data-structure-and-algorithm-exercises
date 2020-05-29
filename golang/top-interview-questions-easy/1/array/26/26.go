@@ -6,6 +6,10 @@ import "log"
 //[9,4,9,8,4]
 
 func intersect(nums1 []int, nums2 []int) []int {
+	if len(nums1) == 0 || len(nums2) == 0 {
+		return nil
+	}
+
 	numList := make(map[int]int)
 	for _, v := range nums1 {
 		for _, vv := range nums2 {
@@ -50,4 +54,29 @@ func intersect(nums1 []int, nums2 []int) []int {
 		}
 	}
 	return result
+}
+
+func intersectBetter(nums1 []int, nums2 []int) []int {
+	if len(nums1) == 0 || len(nums2) == 0 {
+		return nil
+	}
+
+	//1.初始化一个用于统计数量的map， 和一个用于接收交集的切片
+	numMap := make(map[int]int)
+	nums := make([]int, 0)
+
+	//2.遍历nums1，值为key，数量为val
+	for _, num := range nums1 {
+		numMap[num]++
+	}
+
+	//3.遍历nums2，遇到存在的key，数量减1，同时写入到nums切片
+	for _, num := range nums2 {
+		if count, ok := numMap[num]; ok && count > 0 {
+			nums = append(nums, num)
+			numMap[num]--
+		}
+	}
+
+	return nums
 }
