@@ -19,8 +19,11 @@ func Test_moveZeroes(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Log("test nums", tt.name, tt.args.nums)
 			moveZeroes(tt.args.nums)
-			t.Log(tt.name, tt.args.nums)
+			betterMoveZeroes(tt.args.nums)
+			t.Log("moveZeroes", tt.name, tt.args.nums)
+			t.Log("betterMoveZeroes", tt.name, tt.args.nums)
 		})
 	}
 }
