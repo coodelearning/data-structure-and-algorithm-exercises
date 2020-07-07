@@ -24,13 +24,14 @@ func rotateBetter(matrix [][]int) {
 	if 1 == size {
 		return
 	} else {
+		// 按层进行翻转
 		for i := 0; i < size/2; i++ {
-			move(matrix, i, size-1)
+			moveForBetter(matrix, i, size-1)
 		}
 	}
 }
 
-func move(matrix [][]int, s, l int) {
+func moveForBetter(matrix [][]int, s, l int) {
 	i := s
 	j := 0
 	for k := s; k < l-s; k++ {
@@ -41,6 +42,24 @@ func move(matrix [][]int, s, l int) {
 		for s != i || k != j {
 			i, j = j, l-i
 			prev, matrix[i][j] = matrix[i][j], prev
+		}
+	}
+}
+
+func rotateFromEn(matrix [][]int) {
+	n := len(matrix) - 1
+	for x := 0; x < len(matrix)/2; x++ {
+		for y := x; y < n-x; y++ {
+			// save top left
+			t := matrix[x][y]
+			// set top left to bottom left
+			matrix[x][y] = matrix[n-y][x]
+			// set bottom left to bottom right
+			matrix[n-y][x] = matrix[n-x][n-y]
+			// set bottom right to top right
+			matrix[n-x][n-y] = matrix[y][n-x]
+			// set top right to top left
+			matrix[y][n-x] = t
 		}
 	}
 }
