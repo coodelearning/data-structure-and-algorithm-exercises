@@ -1,8 +1,4 @@
-package main
-
-import (
-	"log"
-)
+package _32
 
 // 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。
 
@@ -10,10 +6,10 @@ import (
 
 // 你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。(是不是一个提示)
 
-func main() {
-	ss := "hello"
-	log.Println(reverseString([]byte(ss)))
-}
+//func main() {
+//	ss := "hello"
+//	log.Println(reverseString([]byte(ss)))
+//}
 
 func reverseString(s []byte) string {
 	j := len(s) - 1
