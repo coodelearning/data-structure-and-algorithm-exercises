@@ -1,7 +1,7 @@
 package main
 
 import (
-	"leetcode/other/base/sort"
+	"data-structure-and-algorithm-exercises/other/base/sort"
 	"log"
 )
 
