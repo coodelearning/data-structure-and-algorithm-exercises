@@ -3,8 +3,8 @@ package main
 import "log"
 
 func main() {
-	log.Println("test 14",numberOfSteps(14))
-	log.Println("test 8",numberOfSteps(8))
+	log.Println("test 14", numberOfSteps(14))
+	log.Println("test 8", numberOfSteps(8))
 }
 
 func numberOfSteps(num int) int {
