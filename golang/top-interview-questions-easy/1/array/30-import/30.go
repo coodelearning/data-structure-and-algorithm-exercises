@@ -66,6 +66,7 @@ func BetterIsValidSudoku2(board [][]byte) bool {
 
 // leetcode 题解
 // Ps.噢,这该死的位运算
+// TODO: 位运算与位图先放一放
 func betterIsValidSudoku(board [][]byte) bool {
 	var row, col, block [9]uint16
 	var cur uint16
