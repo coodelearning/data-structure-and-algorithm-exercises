@@ -1,4 +1,4 @@
-package _36
+package _6
 
 import (
 	"strings"

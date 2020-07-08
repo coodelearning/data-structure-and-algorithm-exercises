@@ -1,56 +1,56 @@
-package _36
+package _37
 
 import "testing"
 
-func Test_isPalindrome(t *testing.T) {
+func Test_myAtoi(t *testing.T) {
 	type args struct {
-		s string
+		str string
 	}
 	tests := []struct {
 		name string
 		args args
-		want bool
+		want int
 	}{
 		{
 			name: "测试1",
 			args: args{
-				s: "",
+				str: "42",
 			},
-			want: true,
+			want: 42,
 		},
 		{
 			name: "测试2",
 			args: args{
-				s: "A man, a plan, a canal: Panama",
+				str: "   -42",
 			},
-			want: true,
+			want: -42,
 		},
 		{
 			name: "测试3",
 			args: args{
-				s: "race a car",
+				str: "4193 with words",
 			},
-			want: false,
+			want: 4193,
 		},
 		{
 			name: "测试4",
 			args: args{
-				s: "race is car",
+				str: "words and 987",
 			},
-			want: false,
+			want: 0,
 		},
 		{
 			name: "测试5",
 			args: args{
-				s: "0P",
+				str: "-91283472332",
 			},
-			want: false,
+			want: -2147483648,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := isPalindrome(tt.args.s); got != tt.want {
-				t.Errorf("isPalindrome(%v) = %v, want %v", tt.args.s, got, tt.want)
+			if got := myAtoi(tt.args.str); got != tt.want {
+				t.Errorf("myAtoi(%v) = %v, want %v", tt.args.str, got, tt.want)
 			}
 		})
 	}
