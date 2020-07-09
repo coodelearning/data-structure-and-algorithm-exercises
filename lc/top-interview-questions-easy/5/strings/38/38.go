@@ -13,7 +13,7 @@ func strStr(haystack string, needle string) int {
 	}
 	// 如果不存在返回-1
 	for kn, n := range needle {
-		var isExist bool = false
+		var isExist = false
 		for kh, h := range haystack {
 			// 存在，寻找位置
 			if h == n {
@@ -59,6 +59,23 @@ func strStrBetter(haystack string, needle string) int {
 	for i := 0; i <= len(haystack)-len(needle); i++ {
 		// Ps.等一下，这个犯规了吧？？？
 		if strings.HasPrefix(haystack[i:], needle) {
+			return i
+		}
+	}
+	return -1
+}
+
+func strStrBetter2(haystack string, needle string) int {
+	if len(haystack) < len(needle) {
+		return -1
+	}
+	if haystack == needle {
+		return 0
+	}
+	// Ps. 反正核心就是要抄strings.HasPrefix(),可以，很妙
+	for i := 0; i < len(haystack); i++ {
+		if i+len(needle) <= len(haystack) &&
+			haystack[i:i+len(needle)] == needle {
 			return i
 		}
 	}
