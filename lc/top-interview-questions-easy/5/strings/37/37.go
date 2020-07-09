@@ -1,9 +1,14 @@
 package _37
 
 import (
+	"log"
 	"math"
 	"strings"
 )
+
+// 需要注意的地方在于每一次累加都要判断是否有发生越界
+// 如果只在最后才进行判断可能会错过一些很大的数据
+// 但是好像每一次判断也不能自信的说每次就一定可以避免越界？
 
 func myAtoi(str string) int {
 	// 从第一个非空格字符开始
@@ -18,7 +23,7 @@ func myAtoi(str string) int {
 			return 0
 		}
 	}
-	var result int64
+	// 按顺序提取数字
 	var intChars []int32
 	var intStart bool = false
 	for k, v := range str {
@@ -39,32 +44,21 @@ func myAtoi(str string) int {
 			break
 		}
 	}
+	// 将整形数组元素累加成整数
+	var result int
 	for i := 0; i < len(intChars); i++ {
-		var sqrt int64 = 1
-		for j := 1; j < len(intChars)-i; j++ {
-			sqrt *= 10
+		result = result*10 + int(intChars[i]-'0')
+		// 处理越界
+		switch {
+		case startChar != '-' && result > math.MaxInt32:
+			return math.MaxInt32
+		case startChar == '-' && -result < math.MinInt32:
+			return math.MinInt32
 		}
-		//if result > 0 && math.MaxInt32/result < sqrt {
-		//	if startChar == '-' {
-		//		return math.MinInt32
-		//	}
-		//	return math.MaxInt32
-		//}
-		result += (int64(intChars[i]) - 48) * sqrt
 	}
 	// 判断正负
 	if startChar == '-' && result > 0 {
 		result = -result
-	}
-	// 处理越界
-	if startChar != '-' && result < 0 {
-		return math.MaxInt32
-	}
-	if result >= math.MaxInt32 {
-		return math.MaxInt32
-	}
-	if result <= math.MinInt32 {
-		return math.MinInt32
 	}
 	return int(result)
 }
@@ -109,10 +103,12 @@ func cleanForBetter(s string) (sign int, abs string) {
 
 // 接收的输入是已经处理过的纯数字
 func convertForBetter(sign int, absStr string) int {
+	log.Println("The param is :", sign, absStr)
 	absNum := 0
 	for _, b := range absStr {
 		// b - '0' ==> 得到这个字符类型的数字的真实数值的绝对值
 		absNum = absNum*10 + int(b-'0')
+		log.Println("The abs is ", absNum)
 		// 检查溢出
 		switch {
 		case sign == 1 && absNum > math.MaxInt32:

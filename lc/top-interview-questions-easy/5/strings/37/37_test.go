@@ -99,7 +99,8 @@ func Test_myAtoi(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := myAtoiBetter(tt.args.str); got != tt.want {
+			// if got := myAtoiBetter(tt.args.str); got != tt.want {
+			if got := myAtoi(tt.args.str); got != tt.want {
 				t.Errorf("myAtoi(%v) = %v, want %v", tt.args.str, got, tt.want)
 			}
 		})
