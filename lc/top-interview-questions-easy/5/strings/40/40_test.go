@@ -53,8 +53,32 @@ func Test_longestCommonPrefix(t *testing.T) {
 			},
 			want: "a",
 		},
+		{
+			name: "测试7",
+			args: args{
+				strs: []string{"a", "a", "b"},
+			},
+			want: "",
+		},
+		{
+			name: "测试8",
+			args: args{
+				strs: []string{"abab", "aba", "abc"},
+			},
+			want: "ab",
+		},
+		{
+			name: "测试9",
+			args: args{
+				strs: []string{"aaa", "aa", "aaa"},
+			},
+			want: "aa",
+		},
 	}
 	for _, tt := range tests {
+		//if tt.name != "测试9" {
+		//	continue
+		//}
 		t.Run(tt.name, func(t *testing.T) {
 			if got := longestCommonPrefix(tt.args.strs); got != tt.want {
 				t.Errorf("longestCommonPrefix(%v) = %v, want %v", tt.args.strs, got, tt.want)
