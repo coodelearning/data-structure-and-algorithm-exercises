@@ -1,4 +1,6 @@
-package _42
+package linked_list
+
+import "data-structure-and-algorithm-exercises/lc/top-interview-questions-easy/linked-list/base"
 
 /**
  * Definition for singly-linked list.
@@ -8,20 +10,15 @@ package _42
  * }
  */
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 // 给定的n都是有效的
 // 一趟扫描完成
 
-func removeNthFromEnd(head *ListNode, n int) *ListNode {
+func removeNthFromEnd(head *base.ListNode, n int) *base.ListNode {
 	// result 是哨兵节点
-	result := &ListNode{}
+	result := &base.ListNode{}
 	result.Next = head
 	// cur的前一个指针pre 此时指向nil
-	var pre *ListNode
+	var pre *base.ListNode
 	// cur 目标元素指针（就是我们要删的节点） 此时指向哨兵节点
 	cur := result
 	i := 1

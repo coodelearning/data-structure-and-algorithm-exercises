@@ -1,10 +1,13 @@
-package _41
+package linked_list
 
-import "testing"
+import (
+	"data-structure-and-algorithm-exercises/lc/top-interview-questions-easy/linked-list/base"
+	"testing"
+)
 
 func Test_deleteNode(t *testing.T) {
 	type args struct {
-		node *ListNode
+		node *base.ListNode
 	}
 	tests := []struct {
 		name string
@@ -13,15 +16,15 @@ func Test_deleteNode(t *testing.T) {
 		{
 			name: "测试1",
 			args: args{
-				node: &ListNode{
+				node: &base.ListNode{
 					Val: 4,
-					Next: &ListNode{
+					Next: &base.ListNode{
 						Val: 5,
-						Next: &ListNode{
+						Next: &base.ListNode{
 							Val: 1,
-							Next: &ListNode{
+							Next: &base.ListNode{
 								Val:  9,
-								Next: &ListNode{},
+								Next: &base.ListNode{},
 							},
 						},
 					},
