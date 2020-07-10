@@ -1,6 +1,4 @@
-package linked_list
-
-import "data-structure-and-algorithm-exercises/lc/top-interview-questions-easy/linked-list/base"
+package _41
 
 /**
  * Definition for singly-linked list.
@@ -10,7 +8,12 @@ import "data-structure-and-algorithm-exercises/lc/top-interview-questions-easy/l
  * }
  */
 
-func deleteNode(node *base.ListNode) {
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+func deleteNode(node *ListNode) {
 	node.Val = node.Next.Val
 	node.Next = node.Next.Next
 }

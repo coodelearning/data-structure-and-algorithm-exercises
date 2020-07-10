@@ -6,9 +6,11 @@
 
 
 
-### 目前刷题进度：
+## 目前刷题进度：
 
-- [ ] [LeetCode探索初级算法](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy)
+###  LeetCode-China
+
+- [ ] [[探索]初级算法-帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy)
   - [x] 数组
   - [x] 字符串
   - [ ] 链表-ing
@@ -18,3 +20,8 @@
   - [ ] 设计问题
   - [ ] 数学
   - [ ] 其他
+- [ ] [[探索]中级算法-巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium)
+- [ ] [[探索]高级算法-提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard)
+- [ ] [[题库]-数据库选做](https://leetcode-cn.com/problemset/database/)
+- [ ] [[题库]-多线程选做](https://leetcode-cn.com/problemset/concurrency/)
+- [ ] [每日一题](https://leetcode-cn.com/circle/article/9EZfRE/?utm_campaign=daily_question&utm_medium=banner&utm_source=problemset&gio_link_id=noqw6arR)

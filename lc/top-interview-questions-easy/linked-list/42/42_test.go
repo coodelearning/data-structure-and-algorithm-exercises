@@ -1,35 +1,34 @@
-package linked_list
+package _42
 
 import (
-	"data-structure-and-algorithm-exercises/lc/top-interview-questions-easy/linked-list/base"
 	"reflect"
 	"testing"
 )
 
 func Test_removeNthFromEnd(t *testing.T) {
 	type args struct {
-		head *base.ListNode
+		head *ListNode
 		n    int
 	}
 	tests := []struct {
 		name string
 		args args
-		want *base.ListNode
+		want *ListNode
 	}{
 		{
 			name: "测试1",
 			args: args{
-				head: &base.ListNode{
+				head: &ListNode{
 					Val: 1,
-					Next: &base.ListNode{
+					Next: &ListNode{
 						Val: 2,
-						Next: &base.ListNode{
+						Next: &ListNode{
 							Val: 3,
-							Next: &base.ListNode{
+							Next: &ListNode{
 								Val: 4,
-								Next: &base.ListNode{
+								Next: &ListNode{
 									Val:  5,
-									Next: &base.ListNode{},
+									Next: &ListNode{},
 								},
 							},
 						},
@@ -37,15 +36,15 @@ func Test_removeNthFromEnd(t *testing.T) {
 				},
 				n: 2,
 			},
-			want: &base.ListNode{
+			want: &ListNode{
 				Val: 1,
-				Next: &base.ListNode{
+				Next: &ListNode{
 					Val: 2,
-					Next: &base.ListNode{
+					Next: &ListNode{
 						Val: 3,
-						Next: &base.ListNode{
+						Next: &ListNode{
 							Val:  5,
-							Next: &base.ListNode{},
+							Next: &ListNode{},
 						},
 					},
 				},
