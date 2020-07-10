@@ -2,7 +2,7 @@
 
 ## 简单
 
-### 175. 组合两个表 https://leetcode-cn.com/problems/combine-two-tables/
+### 175. [组合两个表](https://leetcode-cn.com/problems/combine-two-tables/)
 
 ```mssql
 SELECT  `FirstName`
@@ -15,7 +15,7 @@ ON Address.PersonId = Person.PersonId;
 ```
 
 
-### 182. 查找重复的电子邮箱 https://leetcode-cn.com/problems/duplicate-emails/
+### 182. [查找重复的电子邮箱](https://leetcode-cn.com/problems/duplicate-emails/)
 
 #### Function 1:
 

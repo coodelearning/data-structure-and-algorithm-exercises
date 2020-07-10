@@ -23,5 +23,7 @@
 - [ ] [[探索]中级算法-巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium)
 - [ ] [[探索]高级算法-提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard)
 - [ ] [[题库]-数据库选做](https://leetcode-cn.com/problemset/database/)
+  - [x] 175. 组合两个表
+  - [x] 182. 查找重复的电子邮箱
 - [ ] [[题库]-多线程选做](https://leetcode-cn.com/problemset/concurrency/)
 - [ ] [每日一题](https://leetcode-cn.com/circle/article/9EZfRE/?utm_campaign=daily_question&utm_medium=banner&utm_source=problemset&gio_link_id=noqw6arR)
