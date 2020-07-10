@@ -32,7 +32,7 @@ func reverseListRecursive(head *ListNode) *ListNode {
 	next := head.Next
 	// !!! 思考一下这里是为什么先
 	// 上面的next保存了head的后继，此处自然要把后继置空
-	// 如果不置空的话,后面就会跟着一堆尾巴产生干扰（在下方swap ！！！处）
+	// 如果不置空的话，后面就会跟着一堆尾巴产生干扰（在下方swap ！！！处）
 	head.Next = nil
 
 	return swapForRecursive(head, next)
