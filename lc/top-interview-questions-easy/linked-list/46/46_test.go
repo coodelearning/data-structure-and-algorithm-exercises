@@ -21,14 +21,15 @@ func Test_hasCycle(t *testing.T) {
 						Next: &ListNode{
 							Val: 0,
 							Next: &ListNode{
-								Val:  4,
+								Val: 4,
+								// ??? pos = 1 ?
 								Next: nil,
 							},
 						},
 					},
 				},
 			},
-			want: false,
+			want: true,
 		},
 		{
 			name: "测试2",
@@ -36,7 +37,8 @@ func Test_hasCycle(t *testing.T) {
 				head: &ListNode{
 					Val: 1,
 					Next: &ListNode{
-						Val:  2,
+						Val: 2,
+						// ??? pos = -1 ?
 						Next: nil,
 					},
 				},
@@ -47,7 +49,8 @@ func Test_hasCycle(t *testing.T) {
 			name: "测试3",
 			args: args{
 				head: &ListNode{
-					Val:  1,
+					Val: 1,
+					// ??? pos = 0 ?
 					Next: nil,
 				},
 			},

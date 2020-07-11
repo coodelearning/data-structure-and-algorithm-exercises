@@ -14,8 +14,8 @@
 - [ ] [[探索]初级算法-帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy)
   - [x] 数组
   - [x] 字符串
-  - [ ] 链表-ing
-  - [ ] 树
+  - [x] 链表
+  - [ ] 树-ing
   - [ ] 排序与搜索
   - [ ] 动态规划
   - [ ] 设计问题
@@ -23,6 +23,7 @@
   - [ ] 其他
 - [ ] [[探索]中级算法-巩固训练](https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium)
 - [ ] [[探索]高级算法-提升进阶](https://leetcode-cn.com/explore/interview/card/top-interview-questions-hard)
+- [ ] 前两百道题
 - [ ] [[题库]-数据库选做](https://leetcode-cn.com/problemset/database/)
   - [x] 175. 组合两个表
   - [x] 182. 查找重复的电子邮箱
