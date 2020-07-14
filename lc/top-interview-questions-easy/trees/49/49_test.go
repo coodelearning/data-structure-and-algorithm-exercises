@@ -71,7 +71,7 @@ func Test_isSymmetric(t *testing.T) {
 					},
 				},
 			},
-			want: true,
+			want: false,
 		},
 	}
 	for _, tt := range tests {
