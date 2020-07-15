@@ -11,7 +11,7 @@
 
 ###  LeetCode-China
 
-- [ ] [[探索]初级算法-帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy)
+- [ ] [[探索]初级算法-帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy) [59%]
   - [x] 数组
   - [x] 字符串
   - [x] 链表
