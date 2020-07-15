@@ -11,11 +11,11 @@
 
 ###  LeetCode-China
 
-- [ ] [[探索]初级算法-帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy) [59%]
-  - [x] 数组
-  - [x] 字符串
-  - [x] 链表
-  - [ ] 树-ing
+- [ ] [[探索]初级算法-帮助入门](https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy) [61%]
+  - [x] 数组 [100%]
+  - [x] 字符串 [100%]
+  - [x] 链表 [100%]
+  - [ ] 树 [80%]
   - [ ] 排序与搜索
   - [ ] 动态规划
   - [ ] 设计问题
