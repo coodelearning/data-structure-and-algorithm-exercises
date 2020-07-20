@@ -58,3 +58,15 @@ func TestSolution_Shuffle(t *testing.T) {
 		})
 	}
 }
+
+func Test58(t *testing.T) {
+	s := Constructor([]int{1, 2, 3})
+	t.Log("--------------0-------------------")
+	t.Log(s)
+	t.Log("--------------1-------------------")
+	t.Log(s.Shuffle())
+	t.Log("--------------2-------------------")
+	t.Log(s.Reset())
+	t.Log("--------------3-------------------")
+	t.Log(s.Shuffle())
+}
